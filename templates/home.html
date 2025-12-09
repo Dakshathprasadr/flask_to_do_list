@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to home</h1><br><br>
+    <h1>My name is Dakshath</h1><br>
+    <p>This is my simple To-do-list Project</p><br><br><br>
+
+
+    <div style="text-align: center;">
+        <table border="5">
+            <head>
+                <th>Id</th>
+                <th>First name</th>
+                
+                <th>Delete</th>
+            </head>
+
+            {% for u in users_h %}
+            <tbody>
+                <td>{{u.id}}</td>
+                <!-- mistake 1 -->
+                <td>{{u.f_name}}</td>
+                <td><a href="/delete/{{u.id}}"><button>Delete</button></a></td>
+            </tbody>
+
+            {% endfor %}
+
+
+        </table>
+        
+
+    </div>
+
+    <h2><a href="/insert"><button style="background-color: aqua ;border-radius: 10cm;">Add</button></a></h2>
+
+</body>
+</html>
